@@ -7,6 +7,7 @@
             <h1><a href="">Django girls blog</a></h1>
         </div>
 
+        <!--
         <div>
             <p>published: 28.06.2025, 03:00</p>
             <h2><a href="">My first post</a></h2>
@@ -18,5 +19,25 @@
             <h2><a href="">My second post</a></h2>
             <p>....</p>
         </div>
+        -->
+        <!--
+        <div> 
+            {{ posts }}  
+        </div> -->
+        <!--
+        <div> 
+            {% for post in posts %} {{ post }}{% endfor %}
+        </div> 
+        -->
+
+        {% for post in posts %} 
+        <div>
+            <p> publicado: {{ post.published_date }}</p>
+            <h2><a href=""> {{ post.title }} </a></h2>
+            <p> {{ post.text|linebreaksbr }}</p>
+        </div>        
+        {% endfor %}
+
+
     </body>
 </html>
